@@ -1,25 +1,53 @@
 import '../styles/style.scss';
-
-console.log('hellooooo');
+import { get } from 'https';
 
 const app = {};
 
 app.apiKey = '1f645de0-a084-11ea-8c61-ad3e71f18257';
 
-app.getData = () => {
-  const getImages = fetch(
-    `https://api.harvardartmuseums.org/object?apikey=${app.apiKey}`
+app.getArtByColor = selectedColor => {
+  const getArt = fetch(
+    `https://api.harvardartmuseums.org/object?size=25&classification=Paintings&hasimage=1&q=${selectedColor}&apikey=${app.apiKey}`
   );
 
-  getImages
+  getArt
     .then(response => response.json())
     .then(response => {
-      console.log(response.records);
+      const allArtwork = response.records;
+      const artwork = allArtwork.filter(item => item.primaryimageurl !== null);
+      app.displayImages(artwork);
     });
 };
 
-app.init = () => {
-  app.getData();
+app.displayImages = artwork => {
+  const imageContainer = document.querySelector('.image-container');
+
+  artwork.forEach(item => {
+    console.log(item.primaryimageurl);
+    const img = document.createElement('img');
+    img.src = item.primaryimageurl;
+    imageContainer.appendChild(img);
+    console.log(imageContainer);
+  });
 };
 
-app.init();
+app.clearCanvas = () => {
+  const imageContainer = document.querySelector('.image-container');
+  imageContainer.innerHTML = '';
+};
+
+app.selectedColor = e => {
+  const selectedColor = e.target.dataset.color;
+  app.getArtByColor(selectedColor);
+};
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+  button.addEventListener('click', function(e) {
+    app.clearCanvas();
+    app.selectedColor(e);
+  });
+});
+
+// app.init();
