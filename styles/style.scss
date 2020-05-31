@@ -1,12 +1,33 @@
-$bluegrey: #2b3a42;
+$white: white;
 
-h1 {
-  padding: 8px 16px;
-  background: red;
-  color: #e1e6e9;
-  font-family: Menlo, Courier, monospace;
-  font-size: 13px;
-  line-height: 1.5;
-  text-shadow: 0 1px 0 rgba(23, 31, 35, 0.5);
-  border-radius: 3px;
+@import "setup";
+
+.main-content {
+  display: flex;
+  .sidebar {
+    width:25%;
+    height: 100vh;
+    background:$white;
+  }
+  .gallery {
+    width:75%;
+    height:100vh;
+    background:lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: scroll;
+    img {
+      width:20%;
+      height: 32%;
+      margin: 2px;
+      object-fit: cover;
+      // margin:10px;
+      // height:25%;
+    }
+  }
 }
