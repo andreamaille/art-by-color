@@ -40,13 +40,18 @@ app.selectedColor = e => {
   app.getArtByColor(selectedColor);
 };
 
-const buttons = document.querySelectorAll('button');
+const colorOptions = document.getElementsByClassName('color-option');
+// console.log(colorOptions);
 
-buttons.forEach(button => {
-  button.addEventListener('click', function(e) {
+for (const color of colorOptions) {
+  color.addEventListener('click', function(e) {
     app.clearCanvas();
     app.selectedColor(e);
   });
-});
+}
+// colorOptions.forEach(color => {
+
+//   // button
+// });
 
 // app.init();
