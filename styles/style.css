@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Karla:wght@700&display=swap");
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.visuallyHidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0);
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 25%;
+  text-align: center;
+  height: 100vh;
+  background: white;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+h1 {
+  font-family: 'Karla', sans-serif;
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+}
+
+.color-wheel {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.color-option {
+  position: absolute;
+  bottom: 0;
+  margin-left: 100px;
+  width: 300px;
+  height: 100px;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  cursor: pointer;
+}
+
+.color-option-1 {
+  background-color: #0b3d65;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 10;
+}
+
+.color-option-1:hover {
+  background-color: #105993;
+}
+
+.color-option-2 {
+  background-color: #1d5337;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  z-index: 20;
+}
+
+.color-option-2:hover {
+  background-color: #2a7950;
+}
+
+.color-option-3 {
+  background-color: #fbe57a;
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+  z-index: 30;
+}
+
+.color-option-3:hover {
+  background-color: #fcefac;
+}
+
+.color-option-4 {
+  background-color: #d59c40;
+  -webkit-transform: rotate(150deg);
+          transform: rotate(150deg);
+  z-index: 40;
+}
+
+.color-option-4:hover {
+  background-color: #deb26a;
+}
+
+.color-option-5 {
+  background-color: #c45625;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: 50;
+}
+
+.color-option-5:hover {
+  background-color: #db7041;
+}
+
+.color-option-6 {
+  background-color: #815138;
+  -webkit-transform: rotate(210deg);
+          transform: rotate(210deg);
+  z-index: 60;
+}
+
+.color-option-6:hover {
+  background-color: #a56747;
+}
+
+.color-option-7 {
+  background-color: #ac2c19;
+  -webkit-transform: rotate(240deg);
+          transform: rotate(240deg);
+  z-index: 70;
+}
+
+.color-option-7:hover {
+  background-color: #d9371f;
+}
+
+.color-option-8 {
+  background-color: #e074ad;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  z-index: 80;
+}
+
+.color-option-8:hover {
+  background-color: #e99ec6;
+}
+
+.color-option-9 {
+  background-color: #f5f5f5;
+  -webkit-transform: rotate(300deg);
+          transform: rotate(300deg);
+  z-index: 90;
+}
+
+.color-option-9:hover {
+  background-color: white;
+}
+
+.color-option-10 {
+  background-color: #808080;
+  -webkit-transform: rotate(330deg);
+          transform: rotate(330deg);
+  z-index: 100;
+}
+
+.color-option-10:hover {
+  background-color: #9a9a9a;
+}
+
+.color-option-11 {
+  background-color: #333333;
+  -webkit-transform: rotate(0deg) skew(45deg);
+          transform: rotate(0deg) skew(45deg);
+  z-index: 110;
+}
+
+.color-option-11:hover {
+  background-color: #4d4d4d;
+}
+
+.color-option-12 {
+  background-color: #331f4f;
+  -webkit-transform: rotate(30deg) skew(60deg);
+          transform: rotate(30deg) skew(60deg);
+  z-index: 120;
+}
+
+.color-option-12:hover {
+  background-color: #4b2d74;
+}
+
+.gallery {
+  width: 75%;
+  height: 100vh;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: scroll;
+  -webkit-animation: bg-pan-bl 8s both;
+          animation: bg-pan-bl 8s both;
+}
+
+.gallery img {
+  width: 20%;
+  height: 32%;
+  margin: 2px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation: bg-pan-bl 8s both;
+          animation: bg-pan-bl 8s both;
+}
+
+.bg-pan-bl {
+  -webkit-animation: bg-pan-bl 8s both;
+  animation: bg-pan-bl 8s both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-6-10 21:59:29
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation bg-pan-bl
+ * ----------------------------------------
+ */
+@-webkit-keyframes bg-pan-bl {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+@keyframes bg-pan-bl {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style.css.map */

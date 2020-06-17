@@ -1,15 +1,18 @@
 .sidebar {
   width:25%;
+  text-align: center;
   height: 100vh;
   background:$white;
   position: relative;
-  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 h1 {
   font-family: 'Karla', sans-serif;
 }
 
-h2 {
+body {
   font-family: 'Inconsolata', monospace;
 }

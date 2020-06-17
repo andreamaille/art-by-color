@@ -1,10 +1,30 @@
 $white: white;
 
+
+// require('');
+// require('slick-carousel/slick/slick-theme.css');
+
+$slick-font-path: "~slick-carousel/slick/fonts/";
+$slick-loader-path: "~slick-carousel/slick/";
+
+@import '~slick-carousel/slick/slick', '~slick-carousel/slick/slick-theme';
+
+
+
 @import "setup";
 @import "sidebar";
 @import "color-wheel";
 @import "gallery";
 
+// @import "~slick-carousel/slick/slick";
+
+// $slick-font-path: "slick-carousel/slick/fonts/";
+// $slick-loader-path: "slick-carousel/slick/";
+
 .main-content {
   display: flex;
+}
+
+img {
+  width: 100%;
 }
