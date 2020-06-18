@@ -46,19 +46,24 @@ app.getArtByColor = selectedColor => {
 
 app.displayImages = artwork => {
   $('.gallery-slider').slick('slickRemove', null, null, true);
-  // const imageContainer = document.querySelector('.gallery');
-
+  const images = [];
   artwork.forEach(item => {
-
     const img = document.createElement('img');
     img.src = item.primaryimageurl;
 
+    images.push(img);
+
     $('.gallery-slider').slick(
       'slickAdd',
-      `<div><img src='${item.primaryimageurl}'></div>`
+      `<div>
+        <img src='${item.primaryimageurl}'>
+        <img src='${item.primaryimageurl}'>
+        <img src='${item.primaryimageurl}'>
+        </div>`
     );
   });
 
+  console.log(images);
   // $('.gallery')[0].slick.refresh();
 };
 
@@ -83,18 +88,15 @@ for (const color of colorOptions) {
 
 app.init = () => {
   app.getArt();
-};
-
-
-$(document).ready(function() {
-  app.init();
 
   $('.gallery-slider').slick({
-    dots: true,
+    dots: false,
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    arrows: true,
+    arrows: false,
     autoplaySpeed: 2000,
   });
-});
+};
+
+app.init();

@@ -10,15 +10,19 @@
     // overflow: scroll;
     // animation: bg-pan-bl 8s both;
 
-    // img {
-    //   width:20%;
-    //   height: 32%;
-    //   margin: 2px;
-    //   object-fit: cover;
-    //   animation: bg-pan-bl 8s both;
-    //   // margin:10px;
-    //   // height:25%;
-    // }
+    img {
+      // width:20%;
+      height: 32%;
+      margin: 2px;
+      object-fit: cover;
+      animation: bg-pan-bl 8s both;
+      // margin:10px;
+      // height:25%;
+    }
+  }
+
+  .slick-track {
+    height:100vh;
   }
 
   .bg-pan-bl {
