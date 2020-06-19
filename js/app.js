@@ -45,32 +45,36 @@ app.getArtByColor = selectedColor => {
 };
 
 app.displayImages = artwork => {
+  // clear gallery of any images displayed
   $('.gallery-slider').slick('slickRemove', null, null, true);
+
   const images = [];
+
+  // create img element for every item in artwork array
   artwork.forEach(item => {
-    const img = document.createElement('img');
-    img.src = item.primaryimageurl;
-
+    const img = `<img src='${item.primaryimageurl}' alt='${item.title} - ${item.medium}'>`;
     images.push(img);
-
-    $('.gallery-slider').slick(
-      'slickAdd',
-      `<div>
-        <img src='${item.primaryimageurl}'>
-        <img src='${item.primaryimageurl}'>
-        <img src='${item.primaryimageurl}'>
-        </div>`
-    );
   });
 
-  console.log(images);
-  // $('.gallery')[0].slick.refresh();
-};
+  let currentSlide = [];
 
-// app.clearCanvas = () => {
-//   const imageContainer = document.querySelector('.gallery');
-//   imageContainer.innerHTML = '';
-// };
+  for (const image of images) {
+    if (currentSlide.length < 3) {
+      currentSlide.push(image);
+    }
+
+    if (currentSlide.length === 3) {
+      const currentImages = currentSlide.join('');
+      $('.gallery-slider').slick(
+        'slickAdd',
+        `<div>
+          ${currentImages}
+          </div>`
+      );
+      currentSlide = [];
+    }
+  }
+};
 
 app.selectedColor = e => {
   const selectedColor = e.target.dataset.color;
@@ -93,8 +97,8 @@ app.init = () => {
     dots: false,
     slidesToShow: 5,
     slidesToScroll: 1,
-    autoplay: true,
-    arrows: false,
+    autoplay: false,
+    arrows: true,
     autoplaySpeed: 2000,
   });
 };
