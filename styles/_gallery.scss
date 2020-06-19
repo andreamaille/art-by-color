@@ -2,6 +2,7 @@
     width:75%;
     height:100vh;
     background:white;
+    position: relative;
     // display: flex;
     // justify-content: center;
     // align-items: stretch;
@@ -57,4 +58,15 @@
   100% {
     background-position: 0% 100%;
   }
+}
+
+
+.modal {
+  background-color: $white;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: 10;
 }
